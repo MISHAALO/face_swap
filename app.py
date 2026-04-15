@@ -23,8 +23,12 @@ logger = logging.getLogger(__name__)
 BASE_DIR = Path(__file__).parent
 UPLOAD_DIR = BASE_DIR / "uploads"
 OUTPUT_DIR = BASE_DIR / "outputs"
+STATIC_DIR = BASE_DIR / "static"
+MODELS_DIR = BASE_DIR / "models"
 UPLOAD_DIR.mkdir(exist_ok=True)
 OUTPUT_DIR.mkdir(exist_ok=True)
+STATIC_DIR.mkdir(exist_ok=True)
+MODELS_DIR.mkdir(exist_ok=True)
 
 app = FastAPI(title="Face Swap App")
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")

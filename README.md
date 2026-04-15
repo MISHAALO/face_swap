@@ -44,7 +44,7 @@ wget -O models/inswapper_128.onnx \
   "https://github.com/facefusion/facefusion-assets/releases/download/models/inswapper_128.onnx"
 ```
 
-**Вариант 2 — HuggingFace + (публичный репо, без авторизации, проверено — работает):**
+**Вариант 2 — HuggingFace (публичный репо, без авторизации, проверено — работает):**
 ```bash
 mkdir -p models
 wget -O models/inswapper_128.onnx \
