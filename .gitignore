@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+uploads/
+outputs/
+models/*.onnx
+models/buffalo_l/
+venv/
+.venv/

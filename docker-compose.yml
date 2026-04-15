@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  face-swap:
+    build: .
+    container_name: face-swap-app
+    ports:
+      - "8000:8000"
+    volumes:
+      # Модели — чтобы не скачивать при каждом ребилде
+      - ./models:/app/models
+      # Результаты
+      - ./outputs:/app/outputs
+    restart: unless-stopped
+    # Для GPU (NVIDIA) — раскомментировать:
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
